@@ -2,6 +2,7 @@
   "name": "CAVAPP - Premium Wine Inventory",
   "description": "A sophisticated wine inventory management application designed for wine enthusiasts. Track your collection, manage stock levels, and get AI-powered label scanning and consumption window alerts.",
   "requestFramePermissions": [
-    "camera"
+    "camera",
+    "microphone"
   ]
 }

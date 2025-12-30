@@ -48,7 +48,12 @@ export const translations = {
     settings: "Settings",
     chat_placeholder: "Ask about your cellar or a pairing...",
     chat_empty: "Tell me, what are we opening tonight?",
-    chat_system: "You are a world-class sommelier concierge. You have access to the user's wine collection. Answer with elegance, precision, and passion."
+    chat_system: "You are a world-class sommelier concierge. You have access to the user's wine collection. Answer with elegance, precision, and passion.",
+    somm_choice: "Sommelier's Selection",
+    why_this: "Why this wine?",
+    maturity_roadmap: "Peak Maturity Roadmap",
+    bottles_reaching_peak: "Bottles entering peak",
+    year: "Year"
   },
   es: {
     app_name: "CAVAPP",
@@ -98,7 +103,12 @@ export const translations = {
     settings: "Configuración",
     chat_placeholder: "Pregunta sobre tu cava o un maridaje...",
     chat_empty: "¿Dime, qué vamos a descorchar esta noche?",
-    chat_system: "Eres un concierge sommelier de clase mundial. Tienes acceso a la colección de vinos del usuario. Responde con elegancia, precisión y pasión."
+    chat_system: "Eres un concierge sommelier de clase mundial. Tienes acceso a la colección de vinos del usuario. Responde con elegancia, precisión y pasión.",
+    somm_choice: "Selección del Sommelier",
+    why_this: "¿Por qué este vino?",
+    maturity_roadmap: "Mapa de Madurez",
+    bottles_reaching_peak: "Botellas entrando en apogeo",
+    year: "Año"
   }
 };
 
