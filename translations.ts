@@ -22,6 +22,7 @@ export const translations = {
     ready_title: "Ready",
     assistant_msg: "Your personal sommelier assistant is ready.",
     language: "Language",
+    language_select: "Select Language",
     scanning: "Scanning...",
     scan_area: "Scanner Area",
     scan_ready: "Ready to Scan",
@@ -34,7 +35,16 @@ export const translations = {
     notes: "Notes",
     other_varieties: "Other Varieties",
     consumption_journal: "Consumption Journal",
-    units: "Units"
+    units: "Units",
+    listen_sommelier: "Listen to Sommelier",
+    flavor_profile: "Flavor Profile",
+    body: "Body",
+    tannins: "Tannins",
+    acidity: "Acidity",
+    sweetness: "Sweetness",
+    pairings: "Pairings",
+    back: "Back",
+    settings: "Settings"
   },
   es: {
     app_name: "CAVAPP",
@@ -58,6 +68,7 @@ export const translations = {
     ready_title: "Listos",
     assistant_msg: "Tu asistente sommelier personal está listo.",
     language: "Idioma",
+    language_select: "Seleccionar Idioma",
     scanning: "Escaneando...",
     scan_area: "Área de Escaneo",
     scan_ready: "Listo para Escanear",
@@ -70,7 +81,16 @@ export const translations = {
     notes: "Notas",
     other_varieties: "Otras Variedades",
     consumption_journal: "Diario de Consumo",
-    units: "Unidades"
+    units: "Unidades",
+    listen_sommelier: "Escuchar Sommelier",
+    flavor_profile: "Perfil de Sabor",
+    body: "Cuerpo",
+    tannins: "Taninos",
+    acidity: "Acidez",
+    sweetness: "Dulzura",
+    pairings: "Maridajes",
+    back: "Volver",
+    settings: "Configuración"
   }
 };
 

@@ -7,6 +7,7 @@ import WineForm from './components/WineForm';
 import Stats from './components/Stats';
 import QuickScan from './components/QuickScan';
 import HomeDashboard from './components/HomeDashboard';
+import WineDetail from './components/WineDetail';
 import { Wine, ConsumptionLog, ViewType, WineType } from './types';
 import { translations, Language } from './translations';
 
@@ -161,7 +162,7 @@ const App: React.FC = () => {
                         key={wine.id} 
                         wine={wine} 
                         onOpenBottle={handleOpenBottle}
-                        onSelect={(w) => { setSelectedWine(w); setCurrentView('add'); }}
+                        onSelect={(w) => { setSelectedWine(w); setCurrentView('detail'); }}
                         lang={lang}
                       />
                     ))}
@@ -182,28 +183,30 @@ const App: React.FC = () => {
       
       <main className="flex-1 px-6 py-12 lg:px-20 overflow-y-auto">
         <div className="max-w-7xl mx-auto">
-          <header className="mb-16 flex justify-between items-center">
-            <div>
-              <p className="text-red-900 font-black uppercase tracking-[0.4em] text-[10px] mb-3">Estates & Vintages</p>
-              <h1 className="text-5xl lg:text-6xl font-black text-stone-950 serif tracking-tighter">
-                {currentView === 'home' ? t.nav_home : 
-                 currentView === 'inventory' ? t.nav_cellar : 
-                 currentView === 'stats' ? t.nav_stats : 
-                 currentView === 'scan' ? t.nav_vision : t.nav_journal}
-              </h1>
-            </div>
-            {/* Mobile Language Toggle */}
-            <div className="lg:hidden">
-              <button 
-                onClick={() => setLang(lang === 'en' ? 'es' : 'en')}
-                className="bg-stone-100 p-2 rounded-full w-10 h-10 flex items-center justify-center font-bold text-xs"
-              >
-                {lang.toUpperCase()}
-              </button>
-            </div>
-          </header>
+          {currentView !== 'detail' && (
+            <header className="mb-16 flex justify-between items-center">
+              <div>
+                <p className="text-red-900 font-black uppercase tracking-[0.4em] text-[10px] mb-3">Estates & Vintages</p>
+                <h1 className="text-5xl lg:text-6xl font-black text-stone-950 serif tracking-tighter">
+                  {currentView === 'home' ? t.nav_home : 
+                   currentView === 'inventory' ? t.nav_cellar : 
+                   currentView === 'stats' ? t.nav_stats : 
+                   currentView === 'scan' ? t.nav_vision : t.nav_journal}
+                </h1>
+              </div>
+            </header>
+          )}
 
-          {renderContent()}
+          {selectedWine && currentView === 'detail' && (
+            <WineDetail 
+              wine={selectedWine} 
+              onClose={() => setCurrentView('inventory')} 
+              onOpenBottle={handleOpenBottle}
+              lang={lang}
+            />
+          )}
+
+          {currentView !== 'detail' && renderContent()}
         </div>
       </main>
 
