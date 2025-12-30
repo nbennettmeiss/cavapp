@@ -9,18 +9,18 @@ interface BottomNavProps {
   lang: Language;
 }
 
-// Added lang prop to component signature and utilized translations for nav item labels
 const BottomNav: React.FC<BottomNavProps> = ({ currentView, setView, lang }) => {
   const t = translations[lang];
   const navItems = [
     { id: 'home' as ViewType, label: t.nav_home, icon: '🏛️' },
     { id: 'inventory' as ViewType, label: t.nav_cellar, icon: '🍷' },
+    { id: 'concierge' as ViewType, label: 'AI', icon: '🤵‍♂️' },
     { id: 'scan' as ViewType, label: t.nav_vision, icon: '📸' },
     { id: 'stats' as ViewType, label: t.nav_stats, icon: '📊' },
   ];
 
   return (
-    <nav className="lg:hidden fixed bottom-0 left-0 right-0 bg-stone-900/95 backdrop-blur-xl border-t border-white/10 px-6 py-4 flex justify-between items-center z-50 pb-safe">
+    <nav className="lg:hidden fixed bottom-0 left-0 right-0 bg-stone-900/95 backdrop-blur-xl border-t border-white/10 px-4 py-4 flex justify-between items-center z-50 pb-safe">
       {navItems.map((item) => (
         <button
           key={item.id}

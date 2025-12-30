@@ -32,7 +32,6 @@ export interface Wine {
   notes: string;
   image?: string;
   createdAt: number;
-  // Campos Complejos
   tastingNotes?: string[];
   pairings?: string[];
   flavorProfile?: FlavorProfile;
@@ -46,4 +45,4 @@ export interface ConsumptionLog {
   notes?: string;
 }
 
-export type ViewType = 'home' | 'inventory' | 'stats' | 'history' | 'add' | 'scan' | 'detail';
+export type ViewType = 'home' | 'inventory' | 'stats' | 'history' | 'add' | 'scan' | 'detail' | 'concierge';

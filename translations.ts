@@ -8,6 +8,7 @@ export const translations = {
     nav_vision: "Vision AI",
     nav_stats: "Analytics",
     nav_journal: "Journal",
+    nav_concierge: "Sommelier AI",
     btn_entry: "Entry",
     btn_save: "Save to Cellar",
     btn_open: "Open",
@@ -44,7 +45,10 @@ export const translations = {
     sweetness: "Sweetness",
     pairings: "Pairings",
     back: "Back",
-    settings: "Settings"
+    settings: "Settings",
+    chat_placeholder: "Ask about your cellar or a pairing...",
+    chat_empty: "Tell me, what are we opening tonight?",
+    chat_system: "You are a world-class sommelier concierge. You have access to the user's wine collection. Answer with elegance, precision, and passion."
   },
   es: {
     app_name: "CAVAPP",
@@ -54,6 +58,7 @@ export const translations = {
     nav_vision: "Visión IA",
     nav_stats: "Estadísticas",
     nav_journal: "Historial",
+    nav_concierge: "Sommelier IA",
     btn_entry: "Ingresar",
     btn_save: "Guardar en Cava",
     btn_open: "Abrir",
@@ -90,7 +95,10 @@ export const translations = {
     sweetness: "Dulzura",
     pairings: "Maridajes",
     back: "Volver",
-    settings: "Configuración"
+    settings: "Configuración",
+    chat_placeholder: "Pregunta sobre tu cava o un maridaje...",
+    chat_empty: "¿Dime, qué vamos a descorchar esta noche?",
+    chat_system: "Eres un concierge sommelier de clase mundial. Tienes acceso a la colección de vinos del usuario. Responde con elegancia, precisión y pasión."
   }
 };
 

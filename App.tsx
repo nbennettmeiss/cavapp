@@ -8,6 +8,7 @@ import Stats from './components/Stats';
 import QuickScan from './components/QuickScan';
 import HomeDashboard from './components/HomeDashboard';
 import WineDetail from './components/WineDetail';
+import SommelierChat from './components/SommelierChat';
 import { Wine, ConsumptionLog, ViewType, WineType } from './types';
 import { translations, Language } from './translations';
 
@@ -93,6 +94,8 @@ const App: React.FC = () => {
         return <HomeDashboard wines={wines} onQuickAction={setCurrentView} lang={lang} />;
       case 'scan':
         return <QuickScan onAddWine={handleAddWine} onClose={() => setCurrentView('inventory')} lang={lang} />;
+      case 'concierge':
+        return <SommelierChat wines={wines} lang={lang} />;
       case 'add':
         return <WineForm initialData={selectedWine || undefined} onSubmit={handleAddWine} onCancel={() => { setCurrentView('inventory'); setSelectedWine(null); }} lang={lang} />;
       case 'stats':
@@ -191,6 +194,7 @@ const App: React.FC = () => {
                   {currentView === 'home' ? t.nav_home : 
                    currentView === 'inventory' ? t.nav_cellar : 
                    currentView === 'stats' ? t.nav_stats : 
+                   currentView === 'concierge' ? t.nav_concierge :
                    currentView === 'scan' ? t.nav_vision : t.nav_journal}
                 </h1>
               </div>
@@ -210,6 +214,7 @@ const App: React.FC = () => {
         </div>
       </main>
 
+      {/* FIXED: Replaced undefined variable setView with the correct state setter setCurrentView */}
       <BottomNav currentView={currentView} setView={setCurrentView} lang={lang} />
     </div>
   );

@@ -17,6 +17,7 @@ const Sidebar: React.FC<SidebarProps> = ({ currentView, setView, lang, setLang }
   const navItems = [
     { id: 'home' as ViewType, label: t.nav_home, icon: '🏛️' },
     { id: 'inventory' as ViewType, label: t.nav_cellar, icon: '🍷' },
+    { id: 'concierge' as ViewType, label: t.nav_concierge, icon: '🤵‍♂️' },
     { id: 'scan' as ViewType, label: t.nav_vision, icon: '📸' },
     { id: 'stats' as ViewType, label: t.nav_stats, icon: '📊' },
     { id: 'history' as ViewType, label: t.nav_journal, icon: '📜' },
@@ -47,7 +48,6 @@ const Sidebar: React.FC<SidebarProps> = ({ currentView, setView, lang, setLang }
       </nav>
 
       <div className="p-8 space-y-4">
-        {/* Language Selector Popover-style */}
         <div className="relative">
           <button 
             onClick={() => setShowLangMenu(!showLangMenu)}
